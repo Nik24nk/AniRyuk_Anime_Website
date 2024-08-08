@@ -1,0 +1,84 @@
+<%- include("partials/header.ejs") %>
+
+    <!--Title Body is here  -->
+    <section class="header-colored">
+
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h2 class="fw-light" style="color:#D6BD98; font-family:serif; font-weight: lighter; margin: 0;">
+                    <em>Here's Welcome to</em>
+                </h2>
+                <h1><strong style="color: aliceblue;">Ani</strong><strong style="color: orange;">Ryuu</strong></h1>
+                <p style="color: #D6BD98;"><em>"Unlock Your Anime Universe – Search Smart, Watch Happy"</em></p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- List of Animes -->
+    <section>
+
+        <!-- Select Genres here-->
+        <section style="display: flex;justify-content: space-between; margin-top: 10px;">
+            <h3 style="color:rgb(184, 192, 199); margin-left:10px; margin-bottom: 10px;">Recommendations></h3>
+            <p class="d-inline-flex gap-1" style="margin-right: 35px;">
+                <button class="btn btn-outline-light" style="filter: drop-shadow(-3px -3px 3px rgb(68, 60, 60));"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+                    aria-controls="collapseExample">
+                    Select Anime Genres <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5M8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6" />
+                    </svg>
+                </button>
+            </p>
+        </section>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <div style=" width:100%;  display:flex; flex-wrap:wrap; gap: 20px; justify-content: center;">
+
+                    <% for(k=0;k<theme.length;k++){ %>
+                        <a href="<%= theme[k].themeurl %>" class="btn btn-warning"
+                            style="filter: drop-shadow(-10px -10px 10px grey);">
+                            <%= theme[k].themename %>
+                        </a>
+                        <% } %>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommadations here -->
+        <div class="row mb-2">
+            <% for(i=0;i<anime.length;i++){ %>
+                <div class="col-md-4">
+                    <div
+                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static"
+                            style="display: flex; flex-direction: column; justify-content: space-between;">
+                            <p style="color: aliceblue;">Anime</p>
+                            <h4 class="mb-3" style="color: aliceblue;">
+                                <%= anime[i].title %>
+                            </h4>
+
+                            <form>
+                                <button type="submit" class="btn btn-sm btn-outline-warning"
+                                    style="filter: drop-shadow(-10px -10px 10px grey);"
+                                    formaction="<%= anime[i].url %>">Continue
+                                    Reading ></button>
+
+                            </form>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <a href="<%= anime[i].url %>"><img src="<%=anime[i].image%>" width="167px" height="225"
+                                    style="filter: drop-shadow(-10px -10px 10px grey);">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </section>
+
+    <!-- Footer is Here -->
+    <%- include("partials/footer.ejs") %>

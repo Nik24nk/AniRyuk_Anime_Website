@@ -1,0 +1,67 @@
+.gradient-background {
+  background: linear-gradient(300deg, #D6BD98,#1A3636, #000000);
+  background-size: 180% 180%;
+  animation: gradient-animation 3s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
+} 
+
+.header-colored{
+  background: -webkit-linear-gradient(300deg, #1A3636,#000000, #fff );
+  background-size: 180% 180%;
+  animation: gradient-animation 2s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
+} 
+
+.header-colored h1{
+   
+    font-family: "Playwrite HR", cursive;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: normal;
+    font-size: 100px;
+  }
+  
+ 
+.search-header .navbar-brand{
+  
+  font-family: "Playwrite HR", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 30px;
+  font-weight: lighter;
+}
+.search-header h1{
+  
+  font-family: "Playwrite HR", cursive;
+  font-optical-sizing: auto;
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 24px;
+
+}

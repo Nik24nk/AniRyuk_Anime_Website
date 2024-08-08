@@ -1,0 +1,33 @@
+<!-- Header is here -->
+<%- include("partials/header.ejs") %>
+
+    <div class="row mb-2">
+        <% for(i=0;i<enjoy.length;i++){ %>
+            <div class="col-md-4">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static"
+                        style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <p style="color: aliceblue;">Anime</p>
+                        <h4 class="mb-3" style="color: aliceblue;">
+                            <%= enjoy[i].title %>
+                        </h4>
+                        <form>
+                            <button type="submit" class="btn btn-sm btn-outline-warning"
+                                style="filter: drop-shadow(-10px -10px 10px grey);"
+                                formaction="<%= enjoy[i].url %>">Continue
+                                Reading</button>
+                        </form>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <a href="<%= enjoy[i].url %>"><img src="<%=enjoy[i].image%>" width="167px" height="225"
+                                style="filter: drop-shadow(-10px -10px 10px grey);">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+    </div>
+
+    <!-- footer is here -->
+    <%- include("partials/footer.ejs") %>
