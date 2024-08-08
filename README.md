@@ -8,13 +8,13 @@ Jikan is a public API for accessing data from MyAnimeList (MAL), a popular datab
 
 **Key features of the Jikan API include:**
 
-**1**.Anime and Manga Information: Retrieve details about specific anime or manga titles, including summaries, release dates, ratings, and more.
+1. **Anime and Manga Information:** Retrieve details about specific anime or manga titles, including summaries, release dates, ratings, and more.
 
-**2**.Search Capabilities: Search for anime and manga based on various criteria, such as title or genre.
+2. **Search Capabilities:** Search for anime and manga based on various criteria, such as title or genre.
 
-**3**.User Data: Access information about user profiles, including their anime and manga lists.
+3. **User Data:** Access information about user profiles, including their anime and manga lists.
 
-**4**.Seasonal Data: Get information on anime airing in specific seasons or years.
+4. **Seasonal Data:** Get information on anime airing in specific seasons or years.
 
 ## Features:
 1. **Search Anime:** Users should be able to search any anime or mangas out there on internet.
